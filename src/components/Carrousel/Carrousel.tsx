@@ -1,10 +1,11 @@
+import { SetStateAction } from "react";
 import CustomHook from "./CustomHook";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { RxDotFilled } from "react-icons/rx";
 export default function Carrousel() {
   const { index, prevSlide, nextSlide, data_images, setIndex } = CustomHook();
 
-  const nextSlider = (slideIndex) => {
+  const nextSlider = (slideIndex: SetStateAction<number>) => {
     setIndex(slideIndex);
   };
   return (
@@ -30,7 +31,7 @@ export default function Carrousel() {
           </button>
         </div>
         <div className="flex absolute left-[calc(50%-25px)]">
-          {data_images.map((slide, slideIndex) => (
+          {data_images.map((_slide, slideIndex) => (
             <div
               onClick={() => nextSlider(slideIndex)}
               className="cursor-pointer"
