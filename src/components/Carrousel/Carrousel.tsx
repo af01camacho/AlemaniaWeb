@@ -9,7 +9,7 @@ export default function Carrousel() {
   };
   return (
     <>
-      <div className="max-w-[1400px] h-[550px] px-4 py-4 relative">
+      <div className="h-[550px] px-4 py-4 relative">
         <div
           style={{ backgroundImage: `url(${data_images[index].url})` }}
           className="w-full h-full rounded-md bg-center bg-cover duration-500"

@@ -2,7 +2,6 @@ import { useState } from "react";
 import { data_images } from "./Data";
 
 export default function CustomHook() {
-
   const [index, setIndex] = useState(0);
 
   /* CustomHooks */
